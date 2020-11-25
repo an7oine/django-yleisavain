@@ -19,6 +19,13 @@ class Esilataus(models.Prefetch):
       qss
     ))
     # def __init__
+
+  def __repr__(self):
+    return (
+      f'<Esilataus {self.prefetch_through!r}:'
+      f' {", ".join((repr(malli.model) for malli in self.tyypit_ja_kyselyt))}>'
+    )
+
   # class Esilataus
 
 
